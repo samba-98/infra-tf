@@ -16,7 +16,7 @@ resource "google_storage_bucket" "my-bucket2" {
 
 resource "google_compute_instance" "sample-inst" {
   project = "devops-automation-433111"
-  name         = "sample-instance"
+  name         = "sample-inst"
   machine_type = "e2-medium"
   zone         = "us-west1-b"
   tags = ["abc", "def"]
