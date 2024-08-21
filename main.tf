@@ -13,3 +13,23 @@ resource "google_storage_bucket" "my-bucket2" {
   force_destroy = true
   public_access_prevention = "enforced"
 }
+
+resource "google_compute_instance" "instance" {
+  project = "devops-automation-433111"
+  name         = "my-inst"
+  machine_type = "e2-medium"
+  zone         = "us-west1-b"
+  tags = ["abc", "def"]
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+      labels = {
+        my_label = "value"
+      }
+    }
+  }
+  network_interface {
+    network = "default"
+}
+}
