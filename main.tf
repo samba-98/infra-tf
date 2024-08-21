@@ -14,9 +14,9 @@ resource "google_storage_bucket" "my-bucket2" {
   public_access_prevention = "enforced"
 }
 
-resource "google_compute_instance" "instance" {
+resource "google_compute_instance" "instance-00" {
   project = "devops-automation-433111"
-  name         = "my-inst"
+  name         = "my-inst-00"
   machine_type = "e2-medium"
   zone         = "us-west1-b"
   tags = ["abc", "def"]
