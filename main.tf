@@ -18,8 +18,7 @@ resource "google_compute_instance" "sample-inst" {
   project = "devops-automation-433111"
   name         = "sample-inst"
   machine_type = "e2-medium"
-  location = "US"
-  //zone         = "us-west1-a"
+  zone         = "us-east1-a"
   tags = ["abc", "def"]
 
   boot_disk {
